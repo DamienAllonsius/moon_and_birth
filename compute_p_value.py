@@ -12,7 +12,7 @@ def plot_birth(moon_phases):
     y = list(moon_phases.values())
 
     plt.bar(x, y)
-    plt.ylim([min(y)*0.95, max(y)*1.05])
+    plt.ylim([min(y)*0.999, max(y)*1.001])
     plt.title(f"phases of the moon on the birth dates of {sum(y)} French citizens from 1968 to 2018 (source: INSEE) ")
     plt.savefig("moon_phases.png")
     plt.show()
