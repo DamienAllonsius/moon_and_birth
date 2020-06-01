@@ -19,14 +19,10 @@ def plot_birth(moon_phases):
 
 
 if __name__ == "__main__":
-    lang = "fr"
-    moon_phases = get_moon_phases_number_births("naissances_clean_2.csv", lang)
-    if lang == "en":
-        fm = "Full Moon"
-    elif lang == "fr":
-        fm = "Pleine lune"
-    else:
-        raise NotImplementedError()
+    moon_phases = get_moon_phases_number_births("naissances_clean_2.csv")
+
+    fm = "Full Moon"
+
     # H0 : the moon has no effect on birth rate
     proba_full_moon_H0 = 1 / 8
     total_births = sum(list(moon_phases.values()))
